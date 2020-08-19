@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieDBView.MovieDBController">
+   <children>
+      <Label layoutX="441.0" layoutY="14.0" prefHeight="29.0" prefWidth="90.0" text="Movie Database" />
+      <TableView fx:id="tableView" layoutX="321.0" layoutY="49.0" prefHeight="518.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="I.D." />
+          <TableColumn fx:id="nameColumn" prefWidth="203.0" text="Name" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="275.0" text="Description" />
+            <TableColumn fx:id="ratingColumn" prefWidth="75.0" text="Rating" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idTextField" layoutX="137.0" layoutY="49.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="nameTextField" layoutX="137.0" layoutY="85.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextArea fx:id="descriptionTextField" layoutX="137.0" layoutY="121.0" prefHeight="77.0" prefWidth="140.0" wrapText="true" />
+      <TextField fx:id="ratingTextField" layoutX="137.0" layoutY="209.0" prefHeight="25.0" prefWidth="40.0" />
+      <Label layoutX="62.0" layoutY="53.0" text="I.D.:" />
+      <Label layoutX="62.0" layoutY="89.0" text="Name:" />
+      <Label layoutX="62.0" layoutY="121.0" text="Description:" />
+      <Label layoutX="62.0" layoutY="213.0" text="Rating:" />
+      <Button fx:id="searchButton" layoutX="111.0" layoutY="296.0" mnemonicParsing="false" onAction="#searchMovie" text="Search" />
+      <Button fx:id="addButton" layoutX="62.0" layoutY="296.0" mnemonicParsing="false" onAction="#addMovie" text="Add" />
+      <Button fx:id="deleteButton" layoutX="175.0" layoutY="296.0" mnemonicParsing="false" onAction="#deleteMovie" text="Delete" />
+      <Pane layoutX="25.0" layoutY="393.0" />
+      <TextArea editable="false" layoutX="68.0" layoutY="370.0" prefHeight="178.0" prefWidth="200.0" text="To get started, click the View button. Use the buttons above to add, delete, or search for movies in your database! All fields must be entered for a new entry. Items can be deleted by clicking on the item and clicking the delete button. Items can also be searched by name or I.D. Number. Enjoy your movie!" wrapText="true" />
+      <Button fx:id="viewButton" layoutX="236.0" layoutY="296.0" mnemonicParsing="false" onAction="#viewTextfield" text="View" />
+   </children>
+</AnchorPane>
